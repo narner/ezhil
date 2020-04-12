@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 {{ partial "header.html" . }}
+
+	<!-- show contents of how it works page -->
+	  {{ range .Data.Pages }}
+	      {{if eq .Type "main" }} <!-- look for type in the front matter of page -->
+	        <h2 class="f3">{{ .Title }}</h2>
+	        <p>{{ .Content }}</p>
+	      {{end}}
+	  {{ end }}
+
 <body>
 	<div class="container wrapper">
 		{{ partial "head.html" . }}
-
+<!-- 
 		<div class="recent-posts section">
 			<h2 class="section-header">
 				Recent posts
@@ -27,7 +36,7 @@
 				{{ end }}
 				{{ template "partials/paginator.html" . }}
 			</div>
-		</div>
+		</div> -->
 	</div>
 	{{ partial "footer.html" . }}
 </body>
