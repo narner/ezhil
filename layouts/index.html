@@ -4,8 +4,13 @@
 
 	  {{ range .Data.Pages }}
 	      {{if eq .Type "main" }} <!-- look for type in the front matter of page -->
-	        <h2 class="f3">{{ .Title }}</h2>s
+					<div style="text-align: center;">
+					<h1 class="f3">{{ .Title }}</h1>
 	        <p>{{ .Content }}</p>
+				</div>
+
+
+
 	      {{end}}
 	  {{ end }}
 
