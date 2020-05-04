@@ -3,7 +3,7 @@ body {
     color: #333;
     line-height: 1.6;
     font-size: 16px;
-    width: 760px;
+    max-width: 760px;
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont,
                 'avenir next', avenir,
@@ -394,11 +394,12 @@ table th, table td {
 
 @media (max-width: 767px) {
     body {
-        padding: 20px;
+        padding: 2rem;
+        padding-top: 0;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
     }
 
     h2 {
